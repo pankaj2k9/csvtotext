@@ -4,7 +4,7 @@
 
 In the project directory, you put your csv file the chnage the path according to name in index.js file in first line, like
 
-### `const csvFilePath = "./<FILENAME>";`
+### `const fileName = "<Filename Without .csv extension";`
 
 Then you can run:
 

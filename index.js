@@ -1,4 +1,5 @@
-const csvFilePath = "./PartialActionItems-2019-June-11-2154.csv";
+const fileName = "PartialActionItems-2019-June-11-2154";
+const csvFilePath = `./${fileName}.csv`;
 const csv = require("csvtojson");
 const fs = require("fs");
 csv()
@@ -29,7 +30,7 @@ const fileAppend = line => {
     let fd;
 
     try {
-        fd = fs.openSync("convertedTextFile.txt", "a+");
+        fd = fs.openSync(`${fileName}.txt`, "a+");
         fs.appendFileSync(fd, line + "\n\n", null, null);
     } catch (err) {
         /* Handle the error */
