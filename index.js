@@ -1,4 +1,4 @@
-const fileName = "PartialActionItems-2019-June-11-2154";
+const fileName = "FullAction-Items-Proof-Reading-Export-June-11";
 const csvFilePath = `./${fileName}.csv`;
 const csv = require("csvtojson");
 const fs = require("fs");
@@ -14,9 +14,13 @@ const writeFileFromCsv = data => {
     for (key in data) {
         let index = Object.keys(data).indexOf(key);
         if (data.hasOwnProperty(key)) {
-            fileAppend(`__S-${key}__`);
+            fileAppend(
+                `-------------------------------------------S-${key}-------------------------------------------`
+            );
             fileAppend(data[key]);
-            fileAppend(`__E-${key}__`);
+            fileAppend(
+                `-------------------------------------------E-${key}-------------------------------------------`
+            );
         }
         if (index === maxDataLength - 1) {
             fileAppend(`\n\n*******************************************\n\n`);
