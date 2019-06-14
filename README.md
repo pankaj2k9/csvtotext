@@ -10,6 +10,10 @@ Then you can run:
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run for csv to txt:
 
 ### `npm start`
+
+And project directory, you can run for txt to csv:
+
+### `npm run txttocsv`
